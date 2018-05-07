@@ -1,0 +1,102 @@
+var invData = [
+	{
+		"assetvalue" : "844368",
+		"date" : "24/07/2013",
+		"name" : "Steadman"
+	},
+	{
+		"assetvalue" : "217917",
+		"date" : "20/09/2014",
+		"name" : "Stevens"
+	},
+	{
+		"assetvalue" : "105548",
+		"date" : "11/02/2013",
+		"name" : "Lacey"
+	},
+	{
+		"assetvalue" : "631047",
+		"date" : "29/11/2014",
+		"name" : "Rowley"
+	},
+	{
+		"assetvalue" : "256256",
+		"date" : "02/01/2017",
+		"name" : "Browne"
+	},
+	{
+		"assetvalue" : "344776",
+		"date" : "27/07/2016",
+		"name" : "Bush"
+	},
+	{
+		"assetvalue" : "103502",
+		"date" : "19/12/2015",
+		"name" : "Tucker"
+	},
+	{
+		"assetvalue" : "555851",
+		"date" : "08/06/2015",
+		"name" : "Hough"
+	},
+	{
+		"assetvalue" : "132249",
+		"date" : "18/05/2013",
+		"name" : "Schmidt"
+	},
+	{
+		"assetvalue" : "847332",
+		"date" : "15/03/2018",
+		"name" : "Farrington"
+	},
+	{
+		"assetvalue" : "529940",
+		"date" : "08/08/2015",
+		"name" : "Watson"
+	},
+	{
+		"assetvalue" : "83373",
+		"date" : "07/04/2018",
+		"name" : "Lees"
+	},
+	{
+		"assetvalue" : "717354",
+		"date" : "19/01/2016",
+		"name" : "Lopez"
+	},
+	{
+		"assetvalue" : "831061",
+		"date" : "04/05/2013",
+		"name" : "Davey"
+	},
+	{
+		"assetvalue" : "241604",
+		"date" : "15/03/2018",
+		"name" : "Cairns"
+	},
+	{
+		"assetvalue" : "319952",
+		"date" : "17/12/2014",
+		"name" : "Higgins"
+	},
+	{
+		"assetvalue" : "834421",
+		"date" : "06/03/2018",
+		"name" : "Turnbull"
+	},
+	{
+		"assetvalue" : "28370",
+		"date" : "26/07/2016",
+		"name" : "Hamer"
+	},
+	{
+		"assetvalue" : "457516",
+		"date" : "11/06/2014",
+		"name" : "Searle"
+	},
+	{
+		"assetvalue" : "838905",
+		"date" : "10/02/2013",
+		"name" : "Lake"
+	}
+];

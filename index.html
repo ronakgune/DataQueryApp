@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Hone Capital</title>
+      <meta name="Resource-type" content="Document" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+         crossorigin="anonymous"></script>
+      <script
+         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+         crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+      <link rel="stylesheet" href="main.css"/>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="jquery.fullPage.js"></script>
+      <script type="text/javascript" src="examples.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $('#fullpage').fullpage({
+               sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+               anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+               menu: '#menu',
+             });
+         });
+         $( function() {
+           $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
+         } );
+      </script>
+   </head>
+   <body>
+      <!-- TOP -->
+      <ul id="menu">
+         <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+         <li data-menuanchor="secondPage"><a href="#secondPage">Query</a></li>
+         <li data-menuanchor="firstPage"><a onclick="location.reload();">Reset</a></li>
+      </ul>
+      <div id="fullpage">
+         <div class="section active" id="section0">
+            <h1>Hone Capital UX Case Study</h1>
+            <p>
+               <a class="btn btn-primary" href="#secondPage">Generate Query</a>
+            </p>
+         </div>
+         <!-- Query Input-->
+         <div class="section " id="section1">
+            <div class="" style=" margin:0 auto;">
+               <!-- TOP-->
+               <div class="grid-item" style="height: 200px;">
+                  <h5>Choose data to be displayed:</h5>
+                  <div id="rem" data-role="fieldcontain" class="form-group">
+                     <input id="investors" name="remember" type="checkbox" onclick="">   Investors   </input> 
+                     <input id="companies" name="remember" type="checkbox" onclick="">   Companies   </input>
+                     <input id="deals" name="remember" type="checkbox" onclick="">   Deals   </input>     
+                  </div>
+               </div>
+               <!-- Middle -->
+               <div class="grid-item" style="height: 200px;">
+                  <h5>Asset Values to be displayed:</h5>
+                  <div id="asset" class="">
+                     <select  id="asset_check" onmouseover="this.size = this.length" onmouseout="this.size=1" onclick="">
+                        <option value="0">None</option>
+                        <option value="1">All</option>
+                        <option value="2">&gt;</option>
+                        <option value="3">=</option>
+                        <option value="4">&lt;</option>
+                     </select>
+                     <label for="asset_value">Value:</label>
+                     <input type="text" id="asset_value"/>
+                  </div>
+               </div>
+               <!-- Bottom -->
+               <div class="grid-item" style="height: 200px;">
+                  <h5>Dates to be displayed:</h5>
+                  <div id="date" class="grid-item">
+                     <select name="" id="date_check" onmouseover="this.size = this.length" onmouseout="this.size=1" onclick="">
+                        <option value="0">None</option>
+                        <option value="1">All</option>
+                        <option value="2">&gt;</option>
+                        <option value="3">&lt;</option>
+                        <option value="4">=</option>
+                     </select>
+                     <label>Date:</label><input type="text" id="datepicker">
+                  </div>
+               </div>
+               <div class="grid-item"><button type="button" class="btn btn-primary" onclick="max(); this.onclick=null; toggle(); document.getElementById('myDIV').scrollIntoView();">Max</button>
+                  <button type="button" class="btn btn-primary" onclick="min(); this.onclick=null; toggle(); document.getElementById('myDIV').scrollIntoView();">Min</button>
+                  <button type="button" class="btn btn-primary" onclick="main(); this.onclick=null; toggle(); document.getElementById('myDIV').scrollIntoView();">View</button>
+               </div>
+            </div>
+         </div>
+         <!--TABLES-->
+         <div class="section" id ="myDIV" >
+            <div class="slide" data-anchor="slide1" >
+               <div style="overflow-y:scroll;">
+                  <table id="inv_table" class="tb" style="overflow-y:scroll;"></table>
+               </div>
+            </div>
+            <div class="slide" data-anchor="slide2">
+               <div>
+                  <table id="comp_table" class="tb" >
+                  </table>
+               </div>
+            </div>
+            <div class="slide" data-anchor="slide3">
+               <div>
+                  <table id="deal_table" class="tb">
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!--old-->
+         <!--<div>
+            <div class="row">
+                <div class="column">
+                  <table id="inv_table" >
+                  </table>
+                </div>
+            
+                <div class="column">
+                  <table id="comp_table" >
+                  </table>
+                </div>
+            
+                <div class="column">
+                  <table id="deal_table">
+                  </table>
+                </div>
+            </div>-->
+      </div>
+      <script>
+         function toggle() {
+             var x = document.getElementById("myDIV");
+             if (x.style.display === "none") {
+                 x.style.display = "block";
+             } else {
+                 x.style.display = "none";
+             }
+         }
+      </script>
+      <script src="JS/main.js"></script>
+   </body>
+</html>
+
